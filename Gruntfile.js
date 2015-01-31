@@ -1,5 +1,10 @@
 module.exports = function(grunt) {
-  require('grunt-set')(grunt, 'static', {
+  var fs = require('fs');
+  var aws = (fs.existsSync('aws.json')) ? require('./aws.json') : {};
 
+  require('grunt-set')(grunt, 'angular', {
+    aws: aws,
+    dev: 'src',
+    dist: 'dist'
   });
 };

@@ -14,7 +14,7 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-set": "0.0.2",
-    "grunt-set-static": "0.0.11",
+    "grunt-set-angular": "^0.1.0",
     "grunt-webfont": "^0.5.1"
   }
 }
