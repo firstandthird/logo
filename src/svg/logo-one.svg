@@ -8,7 +8,7 @@
         <g id="Idea-15" sketch:type="MSArtboardGroup" transform="translate(-5.000000, -15.000000)" fill="#555555">
             <g id="logo-+-Rectangle-2" sketch:type="MSLayerGroup" transform="translate(1.000000, 12.000000)">
                 <g id="logo" transform="translate(57.525126, 57.146447) rotate(45.000000) translate(-57.525126, -57.146447) translate(18.525126, 16.146447)" sketch:type="MSShapeGroup">
-                    <rect id="logo-one" transform="translate(8.359471, 40.623106) rotate(-90.000000) translate(-8.359471, -40.623106) " x="-31.6405294" y="33.123106" width="80" height="15" rx="5"></rect>
+                    <path d="M0.859470576,5.62746431 C0.859470576,2.86363354 3.10512213,0.623106015 5.85425338,0.623106015 L15.8594706,0.623106015 L15.8594706,80.623106 L5.85425338,80.623106 C3.09571101,80.623106 0.859470576,78.3788854 0.859470576,75.6187477 L0.859470576,5.62746431 Z" id="logo-one"></path>
                 </g>
             </g>
         </g>
