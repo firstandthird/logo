@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-one</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Idea-15" sketch:type="MSArtboardGroup" transform="translate(-5.000000, -15.000000)" fill="#555555">
+            <g id="logo-+-Rectangle-2" sketch:type="MSLayerGroup" transform="translate(1.000000, 12.000000)">
+                <g id="logo" transform="translate(57.525126, 57.146447) rotate(45.000000) translate(-57.525126, -57.146447) translate(18.525126, 16.146447)" sketch:type="MSShapeGroup">
+                    <rect id="logo-one" transform="translate(8.359471, 40.623106) rotate(-90.000000) translate(-8.359471, -40.623106) " x="-31.6405294" y="33.123106" width="80" height="15" rx="5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

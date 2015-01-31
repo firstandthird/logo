@@ -1,0 +1,70 @@
+@import (inline) "../fonts/icons.css";
+@import (inline) "../fonts/texgyreheros-bold-webfont.css";
+
+body {
+  width: 800px;
+  margin: 40px auto;
+}
+
+@mark-size: 115px;
+@font-size: 100px;
+
+.logo {
+  font-size: @font-size;
+  position: relative;
+
+  span {
+    position: absolute;
+    font-family: 'texgyreherosbold';
+    letter-spacing: -5px;
+    line-height: @mark-size;
+    top: 0;
+  }
+
+  .logo--text-first {
+    left: 130px;
+  }
+
+  .icon-logo-plus {
+    font-size: 50px;
+    position: absolute;
+    line-height: @mark-size;
+    top: 10px;
+    left: 330px;
+  }
+
+  .logo--text-third {
+    left: 370px;
+  }
+
+}
+
+.logo-mark {
+  position: relative;
+  width: @mark-size;
+  height: @mark-size;
+
+  .icon {
+    position: absolute;
+  }
+
+  .icon-logo-one {
+    top: 0;
+    left: 0;
+    font-size: 70px;
+  }
+
+  .icon-logo-bullet {
+    @size: 22px;
+    top: (@mark-size - @size)/2;
+    left: (@mark-size - @size)/2;
+    font-size: @size;
+  }
+
+  .icon-logo-three {
+    font-size: 100px;
+    right: 0;
+    bottom: 0;
+  }
+
+}

@@ -1,0 +1,7 @@
+icons:
+  src: '<%= dev %>/svg/*.svg'
+  dest: '<%= dev %>/fonts'
+  options:
+    relativeFontPath: 'fonts'
+    templateOptions:
+      classPrefix: 'icon-'
