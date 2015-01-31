@@ -1,4 +1,5 @@
 angular.module('logo', [
+  'yamldata'
 ])
 .directive('css', function() {
   return {
@@ -15,8 +16,14 @@ angular.module('logo', [
 })
 .directive('bgColor', function() {
 })
-.controller('ColorizerController', function($scope) {
-  $scope.primaryColor = '#C0392B';
-  $scope.secondaryColor = '#444444';
-  $scope.backgroundColor = '#ffffff';
+.controller('ColorizerController', function($scope, COLORS) {
+  $scope.mark = 'both';
+  $scope.colorOptions = COLORS;
+
+  $scope.setColors = function(colors) {
+    $scope.primaryColor = colors[0];
+    $scope.secondaryColor = colors[1];
+    $scope.backgroundColor = colors[2];
+  };
+  $scope.setColors($scope.colorOptions[0]);
 });

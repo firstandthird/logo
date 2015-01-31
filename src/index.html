@@ -3,36 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <title>First+Third Logo</title>
+    <meta name="viewport" content="width=800">
     <link rel="stylesheet" href="https://rawgit.com/firstandthird/ft-ui/master/dist/ft-ui.css"/>
     <link rel="stylesheet" href="styles.css"/>
     <script src="scripts.js"></script>
   </head>
   <body ng-controller="ColorizerController">
-    <div class="logo-container spacing-large" css="'background-color'" css-value="backgroundColor">
+    <div class="logo-container" css="'background-color'" css-value="backgroundColor">
       <div class="logo">
         <div class="logo-mark">
           <i class="icon icon-logo-one" css="'color'" css-value="secondaryColor"></i>
           <i class="icon icon-logo-bullet" css="'color'" css-value="secondaryColor"></i>
           <i class="icon icon-logo-three" css="'color'" css-value="primaryColor"></i>
         </div>
-        <span class="logo--text-first" css="'color'" css-value="secondaryColor">First</span>
-        <i class="icon icon-logo-plus" css="'color'" css-value="primaryColor"></i>
-        <span class="logo--text-third" css="'color'" css-value="secondaryColor">Third</span>
+        <span ng-hide="mark=='only'">
+          <span class="logo--text-first" css="'color'" css-value="secondaryColor">First</span>
+          <i class="icon icon-logo-plus" css="'color'" css-value="primaryColor"></i>
+          <span class="logo--text-third" css="'color'" css-value="secondaryColor">Third</span>
+        </span>
       </div>
     </div>
     <div class="grid12 colors">
-      <div class="column4 color-primary">
-        <h3>Primary Color</h3>
+      <div class="column12 spacing-medium">
+        <input type="radio" id="mark-itself" ng-model="mark" value="only" name="mark"/> <label for="mark-itself">Mark by itself</label>
+        <input type="radio" id="mark-name" ng-model="mark" value="both" name="mark"/> <label for="mark-name">Mark with name</label>
+      </div>
+      <div class="column12 spacing-medium">
+        <h3 class="spacing-small">Colors</h3>
+        <ul class="list-inline">
+          <li ng-repeat="colors in colorOptions" class="swatches" ng-click="setColors(colors)">
+            <span ng-repeat="color in colors" css="'background-color'" css-value="color"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="column4 color-primary spacing-medium">
+        <h3 class="spacing-small">Primary Color</h3>
         <input ng-model="primaryColor" type="color"/>
         <span ng-bind="primaryColor"></span>
       </div>
-      <div class="column4 color-secondary">
-        <h3>Secondary Color</h3>
+      <div class="column4 color-secondary spacing-medium">
+        <h3 class="spacing-small">Secondary Color</h3>
         <input ng-model="secondaryColor" type="color"/>
         <span ng-bind="secondaryColor"></span>
       </div>
-      <div class="column4 color-background">
-        <h3>Background Color</h3>
+      <div class="column4 color-background spacing-medium">
+        <h3 class="spacing-small">Background Color</h3>
         <input ng-model="backgroundColor" type="color"/>
         <span ng-bind="backgroundColor"></span>
       </div>
