@@ -17,8 +17,9 @@ angular.module('logo', [
 })
 .directive('bgColor', function() {
 })
-.controller('ColorizerController', function($scope, COLORS, $localStorage, $location) {
+.controller('ColorizerController', function($scope, COLORS, $localStorage, $location, $timeout) {
   $scope.mark = 'both';
+  var throttleTimeout = null;
   var storedColors = $localStorage.colors || [];
 
   $scope.colorOptions = COLORS.concat(storedColors);
@@ -27,7 +28,6 @@ angular.module('logo', [
     $scope.primaryColor = colors[0];
     $scope.secondaryColor = colors[1];
     $scope.backgroundColor = colors[2];
-    $location.search('colors', colors.join('_'));
   };
   var urlParams = $location.search();
   var urlColor = urlParams.colors;
@@ -36,6 +36,15 @@ angular.module('logo', [
   } else {
     $scope.setColors($scope.colorOptions[0]);
   }
+
+  $scope.$watchGroup(['primaryColor', 'secondaryColor', 'backgroundColor'], function(newValues, oldValues) {
+    if (throttleTimeout) {
+      $timeout.cancel(throttleTimeout);
+    }
+    throttleTimeout = $timeout(function() {
+      $location.search('colors', newValues.join('_'));
+    }, 500);
+  });
 
   $scope.save = function() {
     var color = [$scope.primaryColor, $scope.secondaryColor, $scope.backgroundColor];
