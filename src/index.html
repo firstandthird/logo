@@ -34,20 +34,23 @@
           </li>
         </ul>
       </div>
-      <div class="column4 color-primary spacing-medium">
-        <h3 class="spacing-small">Primary Color</h3>
+      <div class="column3 color-primary spacing-medium">
+        <h3 class="spacing-small">Primary</h3>
         <input ng-model="primaryColor" type="color"/>
         <span ng-bind="primaryColor"></span>
       </div>
-      <div class="column4 color-secondary spacing-medium">
-        <h3 class="spacing-small">Secondary Color</h3>
+      <div class="column3 color-secondary spacing-medium">
+        <h3 class="spacing-small">Secondary</h3>
         <input ng-model="secondaryColor" type="color"/>
         <span ng-bind="secondaryColor"></span>
       </div>
-      <div class="column4 color-background spacing-medium">
-        <h3 class="spacing-small">Background Color</h3>
+      <div class="column3 color-background spacing-medium">
+        <h3 class="spacing-small">Background</h3>
         <input ng-model="backgroundColor" type="color"/>
         <span ng-bind="backgroundColor"></span>
+      </div>
+      <div class="column3 spacing-medium">
+        <button class="button button--large" type="button" ng-click="save()">Save</button>
       </div>
       <div class="column12">
         <h3>Inspirational Colors</h3>
