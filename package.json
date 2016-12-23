@@ -12,9 +12,9 @@
   },
   "homepage": "https://github.com/firstandthird/logo",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-set": "0.0.2",
+    "grunt": "^1.0.1",
+    "grunt-set": "0.0.4",
     "grunt-set-angular": "^0.1.0",
-    "grunt-webfont": "^0.5.1"
+    "grunt-webfont": "^1.6.0"
   }
 }
